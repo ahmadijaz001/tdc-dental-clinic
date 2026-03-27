@@ -42,6 +42,7 @@ export default function MapSection() {
           title="Visit Our Clinic"
           subtitle="Conveniently located in the heart of Dubai — your world-class smile awaits."
           centered
+          onSectionLight
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 overflow-hidden border border-[#e5e5e5]">

@@ -124,8 +124,8 @@ export default function ServicesSection() {
                     }}
                   />
 
-                  {/* Content */}
-                  <div className="relative z-10">
+                  {/* Content — always white text since cards always have dark gradient overlay */}
+                  <div className="relative z-10" style={{ color: "white" }}>
                     {service.highlight && (
                       <span
                         className="inline-block text-[10px] tracking-[0.2em] uppercase px-3 py-1 mb-5"
@@ -138,23 +138,22 @@ export default function ServicesSection() {
                       </span>
                     )}
 
-                    {/* Icon badge */}
+                    {/* Icon badge — always gold on black */}
                     <div
                       className="w-12 h-12 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                      style={{ backgroundColor: "var(--tdc-gold-icon-bg)" }}
+                      style={{ backgroundColor: "#C9A96E" }}
                     >
-                      <Icon style={{ color: "var(--tdc-gold-icon-color)", width: "20px", height: "20px" }} />
+                      <Icon style={{ color: "#0a0a0a", width: "20px", height: "20px" }} />
                     </div>
 
                     <h3
                       className="font-heading text-xl md:text-2xl font-semibold mb-3 group-hover:text-[#C9A96E] transition-colors duration-200"
-                      style={{ color: "var(--tdc-text)" }}
                     >
                       {service.title}
                     </h3>
                     <p
                       className="text-sm leading-relaxed mb-7"
-                      style={{ color: "var(--tdc-text-soft)" }}
+                      style={{ color: "rgba(255,255,255,0.65)" }}
                     >
                       {service.description}
                     </p>

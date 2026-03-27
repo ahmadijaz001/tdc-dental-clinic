@@ -175,9 +175,9 @@
   --tdc-footer-bg: #f0f0f0;
 }
 
-/* Smooth theme transition — only color/bg properties, not transform/opacity */
+/* Smooth theme transition — backgrounds only; color switches instantly to avoid inheritance bleed */
 body, header, footer, section, nav, aside, main, div, p, span, h1, h2, h3, h4, h5, h6, a, button {
-  transition-property: background-color, border-color, color, box-shadow;
+  transition-property: background-color, border-color, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }

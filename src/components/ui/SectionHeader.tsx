@@ -7,6 +7,8 @@ interface SectionHeaderProps {
   subtitle?: string;
   centered?: boolean;
   light?: boolean;
+  /** Use when the section background is var(--tdc-section-light) — adapts text to that variable's color scheme */
+  onSectionLight?: boolean;
 }
 
 export default function SectionHeader({
@@ -15,7 +17,19 @@ export default function SectionHeader({
   subtitle,
   centered = false,
   light = false,
+  onSectionLight = false,
 }: SectionHeaderProps) {
+  const titleColor = onSectionLight
+    ? "var(--tdc-section-light-text)"
+    : light
+    ? "var(--tdc-text)"
+    : "#0a0a0a";
+  const subtitleColor = onSectionLight
+    ? "var(--tdc-section-light-soft)"
+    : light
+    ? "var(--tdc-text-soft)"
+    : "#737373";
+
   return (
     <div className={cn("mb-16", centered && "text-center")}>
       {eyebrow && (
@@ -28,7 +42,7 @@ export default function SectionHeader({
       <AnimateOnScroll delay={0.1}>
         <h2
           className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight"
-          style={{ color: light ? "var(--tdc-text)" : "#0a0a0a" }}
+          style={{ color: titleColor }}
         >
           {title}
         </h2>
@@ -37,7 +51,7 @@ export default function SectionHeader({
         <AnimateOnScroll delay={0.2}>
           <p
             className={cn("mt-6 text-base md:text-lg leading-relaxed max-w-2xl", centered && "mx-auto")}
-            style={{ color: light ? "var(--tdc-text-soft)" : "#737373" }}
+            style={{ color: subtitleColor }}
           >
             {subtitle}
           </p>

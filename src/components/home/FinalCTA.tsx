@@ -3,7 +3,7 @@ import GoldButton from "@/components/ui/GoldButton";
 
 export default function FinalCTA() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-32 overflow-hidden" style={{ color: "white" }}>
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
