@@ -31,7 +31,7 @@ export default function AboutSection() {
               {/* Main image */}
               <div className="aspect-[4/5] relative overflow-hidden bg-[#c8bfb0]">
                 <img
-                  src="https://images.unsplash.com/photo-1588776814546-1ffbb813e1b5?w=900&q=85&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=900&q=85&auto=format&fit=crop"
                   alt="TDC Dental specialist performing treatment"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
